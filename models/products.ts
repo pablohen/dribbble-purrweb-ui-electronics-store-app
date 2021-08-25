@@ -11,7 +11,7 @@ const products: Product[] = [
   {
     id: '1',
     name: 'Samsung Gear S3 Frontier Smartwatch',
-    image: 'smartwatch.png',
+    image: 'samsung-gear-s3.png',
     price: 39.99,
     about: `Put it in your wrist and collect some useful data.`,
   },
