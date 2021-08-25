@@ -29,7 +29,7 @@ const BestsellersProduct = ({ id, name, price, image }: Props) => {
                 <IconButton Icon={PlusIcon} />
               </div>
             </div>
-            <div className="w-40 absolute -top-12">
+            <div className="w-36 absolute -top-20">
               <img className="" src={image} alt={name} />
             </div>
           </div>
