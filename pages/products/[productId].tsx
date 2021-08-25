@@ -8,6 +8,7 @@ import { ShoppingCartIcon, HeartIcon } from '@heroicons/react/outline';
 import EmptyStar from '@heroicons/react/outline/StarIcon';
 import FullStar from '@heroicons/react/solid/StarIcon';
 import Rating from 'react-rating';
+import { NextSeo } from 'next-seo';
 
 interface Props {
   product: Product;
@@ -17,13 +18,14 @@ const ProductPage = ({ product }: Props) => {
   return (
     <div className="flex flex-col min-h-screen bg-white p-4 space-y-4 relative z-0">
       {/* header */}
+      <NextSeo title={product?.name ?? ''} />
       <ProductHeader />
       <div className="w-full aspect-w-1 aspect-h-1 rounded-full absolute -top-1/2 left-0 right-0 bg-[color:var(--primary-light)] z-[-98] md:hidden" />
 
       <div className="flex flex-col flex-grow space-y-4">
         {product && (
           <div className="flex flex-col md:flex-row md:space-x-4 px-4 space-y-4">
-            <div className="">
+            <div className="w-full md:w-96">
               <div className="w-full flex justify-center">
                 <img src={`/${product.image}`} alt={product.name} />
               </div>
@@ -48,7 +50,7 @@ const ProductPage = ({ product }: Props) => {
               </div>
             </div>
 
-            <div className="space-y-2">
+            <div className="w-full space-y-2">
               <p className="text-xl font-bold text-gray-800">About this item</p>
               <p className="text-sm text-gray-500">{product.about}</p>
             </div>
