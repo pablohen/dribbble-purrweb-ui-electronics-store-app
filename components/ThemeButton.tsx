@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SunIcon, MoonIcon } from '@heroicons/react/solid';
 import { useTheme } from 'next-themes';
 
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme();
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    setLoading(false);
+  }, []);
+
   const changeTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
+
+  if (loading) return null;
 
   return (
     <button
