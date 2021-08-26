@@ -8,6 +8,7 @@ Based on https://dribbble.com/shots/16309555-Electronics-Store-App, by [Purrweb 
 - React
 - Next.js
 - Next-SEO
+- Next-Themes
 - Tailwind CSS
 - Heroicons
 - React Rating
