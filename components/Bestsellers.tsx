@@ -11,8 +11,10 @@ const Bestsellers = ({ products }: Props) => {
   return (
     <div className="space-y-2">
       <div className="flex justify-between items-center w-full">
-        <p className="font-bold text-gray-500">Bestsellers</p>
-        <ArrowSmRightIcon className="text-gray-500 h-6" />
+        <p className="font-bold text-gray-500 dark:text-gray-400">
+          Bestsellers
+        </p>
+        <ArrowSmRightIcon className="text-gray-500 dark:text-gray-400 h-6" />
       </div>
 
       <div className="flex space-x-4 overflow-x-auto -m-4 p-4">

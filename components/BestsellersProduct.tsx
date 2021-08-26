@@ -16,10 +16,12 @@ const BestsellersProduct = ({ id, name, price, image }: Props) => {
     <Link href={`/products/${id}`} passHref>
       <a>
         <div className="flex flex-col items-center pt-16" key={id}>
-          <div className="flex flex-col items-center w-80 bg-white rounded-xl shadow-md p-4 pt-20 hover:shadow-lg transform transition-all duration-300 ease-out hover:-translate-y-1 relative">
+          <div className="flex flex-col items-center w-80 bg-white dark:bg-gray-900 rounded-xl shadow-md p-4 pt-20 hover:shadow-lg transform transition-all duration-300 ease-out hover:-translate-y-1 relative">
             <div className="flex pt-2">
               <div className="w-40 space-y-2">
-                <p className="font-bold text-sm text-gray-800">{name}</p>
+                <p className="font-bold text-sm text-gray-800 dark:text-gray-100">
+                  {name}
+                </p>
                 <p className="font-bold text-[color:var(--primary)] text-xs">
                   ${price}
                 </p>

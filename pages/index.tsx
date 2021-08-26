@@ -9,7 +9,7 @@ import FrontPageHeader from '../components/FrontPageHeader';
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-[color:var(--primary-lighter)] p-4 space-y-4">
+    <div className="flex flex-col min-h-screen bg-[color:var(--primary-lighter)] dark:bg-black p-4 space-y-4">
       {/* header */}
       <FrontPageHeader />
 

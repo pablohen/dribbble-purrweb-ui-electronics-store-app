@@ -16,7 +16,7 @@ interface Props {
 
 const ProductPage = ({ product }: Props) => {
   return (
-    <div className="flex flex-col min-h-screen bg-white p-4 space-y-4 relative z-0">
+    <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 p-4 space-y-4 relative z-0">
       {/* header */}
       <NextSeo title={product?.name ?? ''} />
       <ProductHeader />
@@ -31,10 +31,10 @@ const ProductPage = ({ product }: Props) => {
               </div>
 
               <div className="space-y-2 relative">
-                <button className="bg-white shadow rounded-lg p-2 absolute top-0 right-0 transform transition-all duration-200 ease-in-out hover:shadow-lg">
+                <button className="bg-white dark:bg-gray-900 shadow rounded-lg p-2 absolute top-0 right-0 transform transition-all duration-200 ease-in-out hover:shadow-lg">
                   <HeartIcon className="h-6" />
                 </button>
-                <p className="text-xl font-bold text-gray-800">
+                <p className="text-xl font-bold text-gray-800 dark:text-gray-100">
                   {product.name}
                 </p>
                 <div className="flex justify-between items-end">
@@ -51,8 +51,12 @@ const ProductPage = ({ product }: Props) => {
             </div>
 
             <div className="w-full space-y-2">
-              <p className="text-xl font-bold text-gray-800">About this item</p>
-              <p className="text-sm text-gray-500">{product.about}</p>
+              <p className="text-xl font-bold text-gray-800 dark:text-gray-100">
+                About this item
+              </p>
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                {product.about}
+              </p>
             </div>
           </div>
         )}
